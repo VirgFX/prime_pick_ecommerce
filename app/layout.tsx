@@ -10,6 +10,7 @@ import "./globals.css";
 import { Providers } from "@/app/providers";
 
 import React from "react";
+import AuthProvider from "@/components/providers/session-provider";
 
 const geist = Geist({
     subsets: ["latin"],
@@ -37,7 +38,9 @@ export default function RootLayout({
             className={`${geist.variable} ${orbitron.variable} antialiased`}
         >
         <Providers>
-            {children}
+            <AuthProvider>
+                {children}
+            </AuthProvider>
         </Providers>
         </body>
         </html>

@@ -24,6 +24,7 @@ import {
 import Link from "next/link";
 import {Eye, EyeOff} from "lucide-react";
 import {useState} from "react";
+import {signIn} from "next-auth/react";
 
 export default function SignInForm() {
 
@@ -51,6 +52,19 @@ export default function SignInForm() {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-5"
             >
+                <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full"
+                    onClick={() =>
+                        signIn("google", {
+                            callbackUrl: "/",
+                        })
+                    }
+                >
+                    Continue with Google
+                </Button>
+
                 {/* EMAIL */}
                 <FormField
                     control={form.control}
