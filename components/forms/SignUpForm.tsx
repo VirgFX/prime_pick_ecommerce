@@ -19,12 +19,22 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
-
 import { Button } from "@/components/ui/button";
 
+import { Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
+
 export default function SignUpForm() {
+
+    const [showPassword, setShowPassword] =
+        useState(false);
+
+    const [
+        showConfirmPassword,
+        setShowConfirmPassword,
+    ] = useState(false);
+
     const form = useForm<SignUpFormValues>({
         resolver: zodResolver(signUpSchema),
 
@@ -100,12 +110,35 @@ export default function SignUpForm() {
                             <FormLabel>Password</FormLabel>
 
                             <FormControl>
-                                <Input
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    aria-label="password"
-                                    {...field}
-                                />
+                                <div className="relative">
+                                    <Input
+                                        type={
+                                            showPassword
+                                                ? "text"
+                                                : "password"
+                                        }
+                                        placeholder="Confirm your password"
+                                        aria-label="password"
+                                        className="pr-10"
+                                        {...field}
+                                    />
+
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setShowPassword(
+                                                (prev) => !prev
+                                            )
+                                        }
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                                    >
+                                        {showPassword ? (
+                                            <EyeOff className="h-4 w-4" />
+                                        ) : (
+                                            <Eye className="h-4 w-4" />
+                                        )}
+                                    </button>
+                                </div>
                             </FormControl>
 
                             <FormMessage />
@@ -124,13 +157,35 @@ export default function SignUpForm() {
                             </FormLabel>
 
                             <FormControl>
-                                <Input
-                                    type="password"
-                                    placeholder="Confirm your password"
-                                    aria-label="password"
+                                <div className="relative">
+                                    <Input
+                                        type={
+                                            showConfirmPassword
+                                                ? "text"
+                                                : "password"
+                                        }
+                                        placeholder="Confirm your password"
+                                        aria-label="password"
+                                        className="pr-10"
+                                        {...field}
+                                    />
 
-                                    {...field}
-                                />
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setShowConfirmPassword(
+                                                (prev) => !prev
+                                            )
+                                        }
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                                    >
+                                        {showConfirmPassword ? (
+                                            <EyeOff className="h-4 w-4" />
+                                        ) : (
+                                            <Eye className="h-4 w-4" />
+                                        )}
+                                    </button>
+                                </div>
                             </FormControl>
 
                             <FormMessage />
