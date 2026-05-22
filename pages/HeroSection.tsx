@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection () {
     return (
-        <section className="grid min-h-[90vh] items-center gap-10 lg:grid-cols-2">
+        <section className="relative grid min-h-[90vh] items-center gap-10 overflow-hidden lg:grid-cols-2">
 
             {/* Left Side */}
             <div className="space-y-8">
@@ -31,7 +31,7 @@ export default function HeroSection () {
             </div>
 
             {/* Right Side */}
-            <div className="relative flex h-125 w-full max-w-130 items-center justify-center rounded-[40px] bg-zinc-200 dark:bg-zinc-300">
+            <div className="relative flex h-125 w-full max-w-130 shrink-0 items-center justify-center rounded-[40px] bg-zinc-200 dark:bg-zinc-300">
 
                 {/* Main Image */}
                 <Image
@@ -44,7 +44,7 @@ export default function HeroSection () {
                 />
 
                 {/* Thumbnail Images */}
-                <div className="absolute -bottom-25 -right-10 flex gap-6">
+                <div className="absolute bottom-0 right-0 translate-y-1/2 flex gap-6">
 
                     <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-4">
                         <Image

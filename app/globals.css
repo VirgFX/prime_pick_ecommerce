@@ -42,7 +42,7 @@
 
 body {
   font-family: var(--font-geist), serif;
-  @apply mx-auto max-w-7xl bg-background px-6 text-foreground lg:px-8;
+  @apply bg-background text-foreground;
 }
 
 /* Gaming Font */

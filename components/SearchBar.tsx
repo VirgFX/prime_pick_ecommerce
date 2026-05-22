@@ -6,16 +6,17 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function SearchBar() {
+
     const [search, setSearch] = useState("");
 
     return (
         <div
-            className={`
-        group flex items-center overflow-hidden rounded-full
-        border border-border bg-background transition-all duration-300
-        ${search ? "w-64" : "w-11 hover:w-64"}
-      `}
+            className="
+                flex h-11 w-full items-center overflow-hidden
+                rounded-full border border-border bg-background
+            "
         >
+
             {/* Search Button */}
             <Button
                 variant="ghost"
@@ -32,7 +33,10 @@ export default function SearchBar() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search products..."
-                className="w-full bg-transparent pr-4 text-sm outline-none placeholder:text-muted-foreground"
+                className="
+                    w-full bg-transparent pr-4 text-sm outline-none
+                    placeholder:text-muted-foreground
+                "
             />
         </div>
     );
