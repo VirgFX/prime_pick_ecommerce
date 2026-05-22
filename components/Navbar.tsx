@@ -69,26 +69,28 @@ export default function Navbar() {
                             </Link>
                         </div>
 
-                        {/* Desktop Logo */}
-                        <Link
-                            href="/"
-                            className="hidden font-gaming text-3xl font-bold lg:block"
-                            aria-label="PrimePick Home"
-                        >
-                            PrimePick
-                        </Link>
+                        <div className="flex items-center gap-x-10">
+                            {/* Desktop Logo */}
+                            <Link
+                                href="/"
+                                className="hidden font-gaming text-3xl font-bold lg:block"
+                                aria-label="PrimePick Home"
+                            >
+                                PrimePick
+                            </Link>
 
-                        {/* Desktop Nav */}
-                        <div className="hidden items-center justify-center gap-8 xl:gap-10 lg:flex">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="whitespace-nowrap text-sm font-medium transition-colors duration-300 hover:text-zinc-400"
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                            {/* Desktop Nav */}
+                            <div className="hidden items-center justify-center gap-8 xl:gap-10 lg:flex">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className="whitespace-nowrap text-sm font-medium transition-colors duration-300 hover:text-zinc-400"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -133,9 +135,9 @@ export default function Navbar() {
                         ) : (
                             <Link
                                 href="/sign-in"
-                                className="hidden sm:block"
+                                className="block"
                             >
-                                <Button className="rounded-full px-6">
+                                <Button className="rounded-full px-4 sm:px-6">
                                     Sign In
                                 </Button>
                             </Link>

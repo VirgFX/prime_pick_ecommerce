@@ -1,82 +1,174 @@
-import React from 'react'
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 import Image from "next/image";
 
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function HeroSection () {
+import { Button } from "@/components/ui/button";
+
+import { Product } from "@/types";
+
+interface HeroSectionProps {
+    products: Product[];
+}
+
+export default function HeroSection({products,}: HeroSectionProps) {
+
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const activeProduct = products[activeIndex];
+
+    const carouselProducts = useMemo(() => {
+        return [...products, ...products];
+    }, [products]);
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+
+            setActiveIndex((prev) =>
+                prev === products.length - 1 ? 0 : prev + 1
+            );
+
+        }, 5000);
+
+        return () => clearInterval(interval);
+
+    }, [products.length]);
+
     return (
         <section className="relative grid min-h-[90vh] items-center gap-10 overflow-hidden lg:grid-cols-2">
 
-            {/* Left Side */}
+            {/* LEFT SIDE */}
             <div className="space-y-8">
 
                 <div className="space-y-6">
-                    <h1 className="font-gaming text-5xl font-bold leading-tight text-foreground transition-colors duration-300 lg:text-7xl">
-                        GADGET FOR <br /> REAL WINNERS
-                    </h1>
 
-                    <p className="max-w-xl text-lg leading-8 text-muted-foreground transition-colors duration-300">
-                        Level up your setup with premium gaming gear, powerful
-                        electronics, and next-gen tech — carefully picked for gamers,
-                        creators, and performance enthusiasts.
-                    </p>
+                    <motion.h1
+                        key={activeProduct.name}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="font-gaming text-5xl font-bold leading-tight text-foreground lg:text-7xl"
+                    >
+                        GADGET FOR <br /> REAL WINNERS
+                    </motion.h1>
+
+                    <motion.p
+                        key={activeProduct.description}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        className="max-w-xl text-lg leading-8 text-muted-foreground"
+                    >
+                        {activeProduct.description}
+                    </motion.p>
+
+                    <motion.div
+                        key={activeProduct.id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="space-y-1"
+                    >
+                        <p className="text-sm uppercase tracking-widest text-muted-foreground">
+                            {activeProduct.category}
+                        </p>
+
+                        <h2 className="text-3xl font-bold">
+                            {activeProduct.name}
+                        </h2>
+
+                        <p className="text-2xl font-semibold">
+                            ₱{activeProduct.price.toLocaleString()}
+                        </p>
+                    </motion.div>
                 </div>
 
                 <Button
                     size="lg"
-                    className="rounded-xl bg-black px-10 py-6 text-lg font-semibold text-white hover:bg-zinc-900 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+                    className="rounded-xl bg-black px-10 py-6 text-lg font-semibold text-white hover:bg-zinc-900 dark:bg-white dark:text-black"
                 >
                     Shop Now
                 </Button>
             </div>
 
-            {/* Right Side */}
-            <div className="relative flex h-125 w-full max-w-130 shrink-0 items-center justify-center rounded-[40px] bg-zinc-200 dark:bg-zinc-300">
+            {/* RIGHT SIDE */}
+            <div className="relative flex h-130 w-full max-w-140 items-center justify-center overflow-hidden rounded-[40px] bg-zinc-200 dark:bg-zinc-300">
 
-                {/* Main Image */}
-                <Image
-                    src="/headset.png"
-                    alt="Gaming Headset"
-                    width={500}
-                    height={500}
-                    className="h-105 w-auto object-contain"
-                    priority
-                />
+                {/* MAIN PRODUCT */}
+                <AnimatePresence mode="wait">
 
-                {/* Thumbnail Images */}
-                <div className="absolute bottom-0 right-0 translate-y-1/2 flex gap-6">
-
-                    <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-4">
+                    <motion.div
+                        key={activeProduct.id}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.5 }}
+                        className="relative h-full w-full"
+                    >
                         <Image
-                            src="/headset.png"
-                            alt="Thumbnail"
-                            width={112}
-                            height={112}
-                            className="h-28 w-28 object-contain"
+                            src={activeProduct.image}
+                            alt={activeProduct.name}
+                            fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-contain p-10"
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-4">
-                        <Image
-                            src="/headset.png"
-                            alt="Thumbnail"
-                            width={112}
-                            height={112}
-                            className="h-28 w-28 object-contain"
-                        />
-                    </div>
+                </AnimatePresence>
 
-                    <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-4">
-                        <Image
-                            src="/headset.png"
-                            alt="Thumbnail"
-                            width={112}
-                            height={112}
-                            className="h-28 w-28 object-contain"
-                        />
-                    </div>
+                {/* CAROUSEL */}
+                <div className="absolute bottom-0 w-full overflow-hidden pb-6">
+
+                    <motion.div
+                        animate={{
+                            x: ["0%", "-50%"],
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            ease: "linear",
+                            duration: 20,
+                        }}
+                        className="flex w-max gap-6 px-6"
+                    >
+
+                        {carouselProducts.map((product, index) => {
+
+                            const isActive =
+                                index % products.length === activeIndex;
+
+                            return (
+                                <motion.div
+                                    key={`${product.id}-${index}`}
+                                    animate={{
+                                        scale: isActive ? 1.1 : 1,
+                                        y: isActive ? -10 : 0,
+                                    }}
+                                    transition={{
+                                        duration: 0.4,
+                                    }}
+                                    className={`relative flex h-32 w-32 shrink-0 items-center justify-center rounded-2xl border p-4 backdrop-blur-xl ${
+                                        isActive
+                                            ? "border-white bg-zinc-900 shadow-2xl"
+                                            : "border-zinc-700 bg-zinc-900/90"
+                                    }`}
+                                >
+                                    <Image
+                                        src={product.image}
+                                        alt={product.name}
+                                        fill
+                                        sizes="128px"
+                                        className="object-contain p-3"
+                                    />
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
