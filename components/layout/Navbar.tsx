@@ -15,8 +15,8 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 
 import {navLinks} from "@/constants";
-import SearchBar from "@/components/SearchBar";
-import UserMenu from "@/components/UserMenu";
+import SearchBar from "@/components/layout/SearchBar";
+import UserMenu from "@/components/layout/UserMenu";
 
 
 export default function Navbar() {
@@ -61,7 +61,7 @@ export default function Navbar() {
                             </Button>
 
                             <Link
-                                href="/"
+                                href="/public"
                                 className="font-gaming text-2xl font-bold"
                                 aria-label="PrimePick Home"
                             >
@@ -72,7 +72,7 @@ export default function Navbar() {
                         <div className="flex items-center gap-x-10">
                             {/* Desktop Logo */}
                             <Link
-                                href="/"
+                                href="/public"
                                 className="hidden font-gaming text-3xl font-bold lg:block"
                                 aria-label="PrimePick Home"
                             >
@@ -167,7 +167,7 @@ export default function Navbar() {
                 <div className="mb-10 flex items-center justify-between">
 
                     <Link
-                        href="/"
+                        href="/public"
                         className="font-gaming text-2xl font-bold"
                     >
                         PrimePick
@@ -191,7 +191,7 @@ export default function Navbar() {
                     </div>
 
                     <Link
-                        href="/"
+                        href="/public"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >

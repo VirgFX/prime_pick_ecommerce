@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
     signUpSchema,
     SignUpFormValues,
-} from "@/lib/validations/auth";
+} from "@/validators/auth";
 
 import {
     Form,

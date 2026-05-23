@@ -1,5 +1,5 @@
-import HeroSection from "@/components/pages/HeroSection";
-import ShopPage from "@/components/pages/ShopSection";
+import HeroSection from "@/components/sections/HeroSection";
+import ShopSection from "@/components/product/ShopSection";
 
 async function getProducts() {
     const res = await fetch(
@@ -14,12 +14,18 @@ async function getProducts() {
 
 export default async function Home() {
 
-    const products = await getProducts();
+    const products =
+        await getProducts();
 
-  return (
-      <main>
-          <HeroSection products={products} />
-          <ShopPage/>
-      </main>
-  );
+    return (
+        <main>
+
+            <HeroSection
+                products={products}
+            />
+
+            <ShopSection />
+
+        </main>
+    );
 }
