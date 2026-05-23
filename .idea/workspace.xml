@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2efbd861-57ea-4ff0-a98d-f7e8084929d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/products/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/test/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/product-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prisma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/corsair-xeneon-flex.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/elgato-stream-deck-mk2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/hyperx-cloud-3-wireless.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/logitech-gpro-superlight2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/razer-viper-v3-pro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/rog-strix-scope-ii-96.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/samsung-odyssey-g6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/secretlab-titan-evo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/sony-inzone-buds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/steelseries-apex-pro-tkl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/pages/ShopSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shop/CategoryFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shop/ProductGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shop/SortProduct.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/products.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(main)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/products/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/products/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/PasswordInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/PasswordInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shop/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pages/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +68,9 @@
       <recent name="C:\Users\Virgel Cortel\Desktop\prime_pick_ecommerce_web\public\products" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Virgel Cortel\Desktop\prime_pick_ecommerce_web\components\pages" />
+      <recent name="C:\Users\Virgel Cortel\Desktop\prime_pick_ecommerce_web\components\shop" />
+      <recent name="C:\Users\Virgel Cortel\Desktop\prime_pick_ecommerce_web\components" />
       <recent name="C:\Users\Virgel Cortel\Desktop\prime_pick_ecommerce_web\public\products" />
     </key>
   </component>
@@ -113,7 +105,8 @@
       <updated>1779436872296</updated>
       <workItem from="1779436873706" duration="50000" />
       <workItem from="1779436928989" duration="6899000" />
-      <workItem from="1779452556861" duration="2948000" />
+      <workItem from="1779452556861" duration="3212000" />
+      <workItem from="1779494428520" duration="5318000" />
     </task>
     <servers />
   </component>

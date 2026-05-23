@@ -6,6 +6,6 @@ export interface Product {
     stock: number;
     image: string;
     category: string;
-    createdAt: string;
-    updatedAt: string;
+    createdAt: Date;
+    updatedAt: Date;
 }
