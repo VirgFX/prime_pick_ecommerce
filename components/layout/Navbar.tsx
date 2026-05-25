@@ -41,8 +41,8 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="relative z-50 py-6">
-
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 py-4 backdrop-blur-md">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="grid grid-cols-[auto_1fr_auto] items-center gap-6">
 
                     {/* LEFT SIDE */}
@@ -61,7 +61,7 @@ export default function Navbar() {
                             </Button>
 
                             <Link
-                                href="/public"
+                                href="/"
                                 className="font-gaming text-2xl font-bold"
                                 aria-label="PrimePick Home"
                             >
@@ -69,10 +69,10 @@ export default function Navbar() {
                             </Link>
                         </div>
 
-                        <div className="flex items-center gap-x-10">
+                        <div className="flex items-center gap-x-20">
                             {/* Desktop Logo */}
                             <Link
-                                href="/public"
+                                href="/"
                                 className="hidden font-gaming text-3xl font-bold lg:block"
                                 aria-label="PrimePick Home"
                             >
@@ -82,13 +82,13 @@ export default function Navbar() {
                             {/* Desktop Nav */}
                             <div className="hidden items-center justify-center gap-8 xl:gap-10 lg:flex">
                                 {navLinks.map((link) => (
-                                    <Link
+                                    <a
                                         key={link.name}
                                         href={link.href}
                                         className="whitespace-nowrap text-sm font-medium transition-colors duration-300 hover:text-zinc-400"
                                     >
                                         {link.name}
-                                    </Link>
+                                    </a>
                                 ))}
                             </div>
                         </div>
@@ -144,6 +144,7 @@ export default function Navbar() {
                         )}
                     </div>
                 </div>
+                </div>
             </nav>
 
             {/* BACKDROP */}
@@ -167,7 +168,7 @@ export default function Navbar() {
                 <div className="mb-10 flex items-center justify-between">
 
                     <Link
-                        href="/public"
+                        href="/"
                         className="font-gaming text-2xl font-bold"
                     >
                         PrimePick
@@ -190,61 +191,61 @@ export default function Navbar() {
                         <SearchBar />
                     </div>
 
-                    <Link
-                        href="/public"
+                    <a
+                        href="#home"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >
                         <House className="h-5 w-5" />
                         <span>Home</span>
-                    </Link>
+                    </a>
 
-                    <Link
-                        href="/shop"
+                    <a
+                        href="#shop"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >
                         <Store className="h-5 w-5" />
                         <span>Shop</span>
-                    </Link>
+                    </a>
 
-                    <Link
-                        href="/categories"
+                    <a
+                        href="#categories"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >
                         <LayoutGrid className="h-5 w-5" />
                         <span>Categories</span>
-                    </Link>
+                    </a>
 
-                    <Link
-                        href="/deals"
+                    <a
+                        href="#deals"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >
                         <BadgePercent className="h-5 w-5" />
                         <span>Deals</span>
-                    </Link>
+                    </a>
 
-                    <Link
-                        href="/gaming-gear"
+                    <a
+                        href="#gaming-gear"
                         className="flex items-center gap-3 rounded-xl px-4 py-3 transition hover:bg-muted"
                         onClick={() => setIsOpen(false)}
                     >
                         <Gamepad2 className="h-5 w-5" />
                         <span>Gaming Gear</span>
-                    </Link>
+                    </a>
                 </div>
 
                 {/* CTA */}
-                <Link
-                    href="/shop"
+                <a
+                    href="#shop"
                     onClick={() => setIsOpen(false)}
                 >
                     <Button className="mt-6 h-12 w-full rounded-2xl text-base font-semibold">
                         Shop Now
                     </Button>
-                </Link>
+                </a>
             </aside>
         </>
     );

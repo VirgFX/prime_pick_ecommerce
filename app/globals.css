@@ -141,4 +141,8 @@ body {
     @apply font-sans;
     scroll-behavior: smooth;
   }
+
+  section {
+    scroll-margin-top: 70px;
+  }
 }

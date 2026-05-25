@@ -1,30 +1,46 @@
-import HeroSection from "@/components/sections/HeroSection";
-import ShopSection from "@/components/product/ShopSection";
+import Home from "@/components/sections/Home";
+import Shop from "@/components/sections/Shop";
+import Categories from "@/components/sections/Categories";
+import Deals from "@/components/sections/Deals";
+import GamingGear from "@/components/sections/GamingGear";
+import { getProducts, getFlashDeals } from "@/lib/products";
 
-async function getProducts() {
-    const res = await fetch(
-        "http://localhost:3000/api/products",
-        {
-            cache: "no-store",
-        }
-    );
-
-    return res.json();
+interface HomeProps {
+    searchParams?: Promise<{
+        page?: string;
+    }>;
 }
 
-export default async function Home() {
-
-    const products =
-        await getProducts();
+export default async function HomePage({ searchParams }: HomeProps) {
+    const params = await searchParams;
+    const page = Number(params?.page) || 1;
+    const [products, flashDeals] = await Promise.all([
+        getProducts(),
+        getFlashDeals(),
+    ]);
 
     return (
         <main>
 
-            <HeroSection
-                products={products}
-            />
+            <section id="home">
+                <Home products={products} />
+            </section>
 
-            <ShopSection />
+            <section id="shop">
+                <Shop page={page} />
+            </section>
+
+            <section id="categories">
+                <Categories />
+            </section>
+
+            <section id="deals">
+                <Deals flashDeals={flashDeals} />
+            </section>
+
+            <section id="gaming-gear">
+                <GamingGear />
+            </section>
 
         </main>
     );

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Virgel Cortel\\\\Desktop\\\\prime_pick_ecommerce_web\\\\app\\\\\\(main\\)\\\\shop\")",
+      "Bash(Out-Null)"
+    ]
+  }
+}

@@ -1,5 +1,3 @@
-// /lib/validations/auth.ts
-
 import { z } from "zod";
 
 export const signInSchema = z.object({
@@ -40,7 +38,6 @@ export const signUpSchema = z
         (data) => data.password === data.confirmPassword,
         {
             message: "Passwords do not match",
-
             path: ["confirmPassword"],
         }
     );

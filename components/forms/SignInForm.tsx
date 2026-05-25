@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
     signInSchema,
     SignInFormValues,
-} from "@/validators/auth";
+} from "@/lib/validators";
 
 import { Button } from "@/components/ui/button";
 

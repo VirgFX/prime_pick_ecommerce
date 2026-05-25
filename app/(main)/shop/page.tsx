@@ -1,5 +1,6 @@
 import ProductGrid from "@/components/product/ProductGrid";
 import CategoryFilter from "@/components/product/CategoryFilter";
+import Pagination from "@/components/product/Pagination";
 
 import {
     getProducts,
@@ -7,23 +8,30 @@ import {
 } from "@/lib/products";
 import BackButton from "@/components/product/BackButton";
 
+const PAGE_SIZE = 8;
+
 interface ShopPageProps {
     searchParams?: Promise<{
         category?: string;
+        page?: string;
     }>;
 }
 
-export default async function ShopPage({searchParams,}: ShopPageProps) {
+export default async function ShopPage({ searchParams }: ShopPageProps) {
 
     const params = await searchParams;
 
     const category = params?.category;
+    const currentPage = Math.max(1, Number(params?.page) || 1);
 
-    const products =
-        await getProducts(category);
+    const allProducts = await getProducts(category);
+    const totalPages = Math.ceil(allProducts.length / PAGE_SIZE);
+    const products = allProducts.slice(
+        (currentPage - 1) * PAGE_SIZE,
+        currentPage * PAGE_SIZE,
+    );
 
-    const categories =
-        await getCategories();
+    const categories = await getCategories();
 
     return (
         <section className="mx-auto w-full max-w-400 px-4 py-10 sm:px-6 lg:px-10 lg:py-14">
@@ -33,7 +41,7 @@ export default async function ShopPage({searchParams,}: ShopPageProps) {
                 {/* Header */}
                 <div className="space-y-5 border-b pb-8">
 
-                    <BackButton/>
+                    <BackButton />
 
                     <div className="space-y-3">
 
@@ -51,7 +59,6 @@ export default async function ShopPage({searchParams,}: ShopPageProps) {
 
                 </div>
 
-
                 {/* Filter Section */}
                 <div className="rounded-2xl border bg-card p-6">
 
@@ -62,14 +69,12 @@ export default async function ShopPage({searchParams,}: ShopPageProps) {
                         </h2>
 
                         <span className="text-sm text-muted-foreground">
-                            {products.length} products
+                            {allProducts.length} products
                         </span>
 
                     </div>
 
-                    <CategoryFilter
-                        categories={categories}
-                    />
+                    <CategoryFilter categories={categories} />
 
                 </div>
 
@@ -90,8 +95,11 @@ export default async function ShopPage({searchParams,}: ShopPageProps) {
 
                     </div>
 
-                    <ProductGrid
-                        products={products}
+                    <ProductGrid products={products} />
+
+                    <Pagination
+                        currentPage={currentPage}
+                        totalPages={totalPages}
                     />
 
                 </div>

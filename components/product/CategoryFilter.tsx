@@ -40,6 +40,8 @@ export default function CategoryFilter({categories,}: CategoryFilterProps) {
             );
         }
 
+        params.delete("page");
+
         const targetPath =
             pathname === "/"
                 ? "/shop"

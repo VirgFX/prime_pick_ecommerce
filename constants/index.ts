@@ -1,22 +1,22 @@
 export const navLinks = [
     {
         name: "Home",
-        href: "/",
+        href: "#home",
     },
     {
         name: "Shop",
-        href: "/product",
+        href: "#shop",
     },
     {
         name: "Categories",
-        href: "/categories",
+        href: "#categories",
     },
     {
         name: "Deals",
-        href: "/deals",
+        href: "#deals",
     },
     {
         name: "Gaming Gear",
-        href: "/gaming-gear",
+        href: "#gaming-gear",
     },
 ];

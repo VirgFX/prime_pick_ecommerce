@@ -5,36 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2efbd861-57ea-4ff0-a98d-f7e8084929d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/product/BackButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/product/CategoryFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/product/ShopSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prime_pick_ecommerce_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prime_pick_ecommerce_web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(main)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(main)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/SearchBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UserMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/UserMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/test/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/shop/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/forms/SignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/SignUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/SingInForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/SingInForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pages/ShopSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shop/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/CategoryFilter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/ProductGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/ProductGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shop/SortProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/SortProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/SingInForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/BackButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/BackButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/CategoryFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/CategoryFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/ShopSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/ShopSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/HeroSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/products.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validations/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/validators/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validators/auth.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="79" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -51,23 +55,27 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Virgel Cortel/Desktop/prime_pick_ecommerce_web/public/products&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Virgel Cortel\\Desktop\\prime_pick_ecommerce_web\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -117,7 +125,13 @@
       <workItem from="1779436928989" duration="6899000" />
       <workItem from="1779452556861" duration="3212000" />
       <workItem from="1779494428520" duration="13004000" />
-      <workItem from="1779531874092" duration="2197000" />
+      <workItem from="1779531874092" duration="3077000" />
+      <workItem from="1779549118465" duration="407000" />
+      <workItem from="1779668587633" duration="122000" />
+      <workItem from="1779697175803" duration="1399000" />
+      <workItem from="1779698598286" duration="738000" />
+      <workItem from="1779699418020" duration="71000" />
+      <workItem from="1779699500086" duration="4072000" />
     </task>
     <servers />
   </component>

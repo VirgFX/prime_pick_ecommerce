@@ -8,7 +8,7 @@ export default function BackButton() {
 
     return (
         <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/#shop")}
             className="
                 inline-flex
                 items-center
